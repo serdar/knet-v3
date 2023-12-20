@@ -1,0 +1,8 @@
+---
+import type { GetStaticPaths } from "astro";
+
+export const getStaticPaths = (() => {
+   
+   return [{params: {id: 0}}];
+}) satisfies GetStaticPaths;
+---
