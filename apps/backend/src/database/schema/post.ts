@@ -2,8 +2,9 @@ import { int, mysqlEnum, mysqlTable, uniqueIndex, varchar, serial, text, mysqlSc
 
 export const posts = mysqlTable("posts", {
   id: int("id").primaryKey().autoincrement(),
-  name: varchar("title", {length: 255}),
+  title: varchar("title", {length: 255}),
   description: text("description"),
   pubDate: datetime("pubDate"),
-  published: boolean("published")
+  published: boolean("published"),
+  slug: varchar("slug", {length: 255})
 });

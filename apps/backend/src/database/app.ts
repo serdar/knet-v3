@@ -10,12 +10,8 @@ export const connection = connect({
 
 export const db = drizzle(connection, {schema});
 
-export async function queryDb() {
+export async function getPosts() {
   //db stuff
   console.log(`db`);
-  const result = await db.query.posts.findMany();
-
-  result.map( r => {
-    console.log(`${r.name}`)
-  })
+  return await db.query.posts.findFirst();
 }

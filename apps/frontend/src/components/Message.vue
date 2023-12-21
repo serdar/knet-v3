@@ -1,27 +1,26 @@
 <template>
-  <h1>{{ message }}</h1>
+  <h1>{{ message.title }}</h1>
+  <p>{{ message.description }}</p>
+  <p>{{ message.pubDate }}</p>
 </template>
 
 <script>
 import { ref, onMounted } from 'vue'
-// asd
-// onMounted(() => {
-//   fetchData()
-// })
 
 export default {
   methods: {
     async fetchData() {
-      this.message = await fetch('http://localhost:3000').then(d => {return d.text()})
+      this.message = await fetch('http://localhost:3000').then(d => {return d.json()})
     }
   },
   data() {
     return {
-      message: 'default'
+      message: {
+      }
     }
   },
   created(){
-    this.fetchData();
+    const posts = this.fetchData();
   },
   setup() {
     onMounted: {console.log('onMounted')}
