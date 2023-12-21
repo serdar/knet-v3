@@ -5,7 +5,8 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "dev": "npx nodemon index.mjs"
+    "dev": "npx nodemon index.mjs",
+    "build": "vite"
   },
   "keywords": [],
   "author": "",
@@ -17,5 +18,9 @@
     "drizzle-orm": "^0.29.1",
     "hono": "^3.11.8",
     "nodemon": "^3.0.2"
+  },
+  "devDependencies": {
+    "typescript": "^5.3.3",
+    "vite": "^5.0.10"
   }
 }

@@ -4,9 +4,10 @@ import { cors } from 'hono/cors'
 
 const app = new Hono();
 app.use('/', cors())
-app.get('/', (c) => c.text('fdfdwwww'));
+app.get('/', (c) => c.text('Hello Bun!'))
 
-serve(app, (opt) => {
-   console.log(`Hono is on port: ${opt.port}`)
-})
-// export default app;
+// serve(app, (opt) => {
+//    console.log(`Hono is on port: ${opt.port}`)
+// })
+
+export default app;
