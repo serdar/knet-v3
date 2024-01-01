@@ -15,3 +15,9 @@ export async function getPosts() {
   console.log(`db`);
   return await db.query.posts.findFirst();
 }
+
+export async function getPostBySlug() {
+  //db stuff
+  console.log(`db`);
+  return await db.query.posts.findFirst();
+}

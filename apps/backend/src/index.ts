@@ -5,6 +5,7 @@ import { getPosts } from './database/app'
 import { serve } from "@hono/node-server";
 
 const app = new Hono();
+
 app.use('/', cors())
 app.get('/', async (c) => { 
    const posts = await getPosts();
