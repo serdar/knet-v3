@@ -2,7 +2,8 @@
    "scripts": {
       "build": "vite build",
       "type-check": "tsc",
-      "dev:all": "turbo run dev"
+      "dev:all": "turbo run dev",
+      "preinstall": "npx only-allow pnpm"
    },
    "packageManager": "pnpm@8.12.1",
    "engines": {
@@ -12,6 +13,7 @@
    "type": "module",
    "private": true,
    "workspaces": [
-      "apps/*"
+      "apps/*",
+      "packages/*"
    ]
 }

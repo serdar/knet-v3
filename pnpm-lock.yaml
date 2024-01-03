@@ -28,6 +28,9 @@ importers:
       hono:
         specifier: ^3.11.8
         version: 3.11.11
+      models:
+        specifier: workspace:*
+        version: link:../../packages/models
       nodemon:
         specifier: ^3.0.2
         version: 3.0.2
@@ -62,6 +65,8 @@ importers:
       vue:
         specifier: ^3.3.12
         version: 3.3.12(typescript@5.3.3)
+
+  packages/models: {}
 
 packages:
 
