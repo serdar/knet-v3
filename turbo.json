@@ -12,8 +12,8 @@
     "dev:api":{},
     "dev": {
       "cache": false,
-      "persistent": true,
-      "dependsOn": ["^backend#dev"]
+      "persistent": true
+
     },
     "type-check": {}
   }
