@@ -3,6 +3,7 @@ import { drizzle } from 'drizzle-orm/planetscale-serverless'
 import { connect } from '@planetscale/database'
 import * as schema from '../database/schema/post'
 import { eq } from 'drizzle-orm'
+import { desc, asc } from 'drizzle-orm'
 
 // create the connection
 export const connection = connect({
@@ -18,7 +19,10 @@ export async function getPost(id: number) {
 }
 
 export async function getPosts() {
-  return await db.query.posts.findMany();
+  return await db.query.posts.findMany({
+    limit: 2,
+    orderBy: [desc(schema.posts.pubDate)]
+  });
 }
 
 export async function getPostBySlug(slug: string) {

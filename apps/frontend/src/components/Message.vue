@@ -1,7 +1,9 @@
 <template>
-  <h1>{{ message.title }}</h1>
-  <p>{{ message.description }}</p>
-  <p>{{ message.pubDate }}</p>
+  <article v-for="item in message">
+    <h1><a  v-bind:href="'/'+item.id" class="href">{{ item.title }}</a></h1>
+    <p v-html="item.description"></p>
+    <p>{{ item.pubDate }}</p>
+  </article>
 </template>
 
 <script>
